@@ -3,7 +3,7 @@ const jokeDisplay = document.querySelector('#joke');
 
 btn.addEventListener('click', async () => {
   try {
-    const response = await fetch('http://localhost:3000/joke');
+    const response = await fetch('/joke');
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
