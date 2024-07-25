@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+:root {
+    --font-main: "Gabarito", sans-serif;
+    --font-second: "Gaegu", sans-serif;
+    --regular-bold: 500;
+    --semi-bold: 600;
+    --bold: 700;
+    --extra-bold: 800;
+    --main-size: 24px;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: var(--main-size);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: var(--font-second);
+    font-weight: var(--semi-bold);
+    font-size: 2em;
+}

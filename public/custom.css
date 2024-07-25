@@ -1,0 +1,97 @@
+#joke-btn,
+#joke-btn:before,
+#joke-btn:after {
+  box-sizing: border-box;
+}
+
+#joke-btn {
+  touch-action: manipulation;
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  display: block;
+  height: 60px;
+  width: 175px;
+  padding: 20px;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin: 0 auto;
+  border-radius: 10px;
+  top: 0;
+  -webkit-transition: 0.15s ease-in-out;
+  -moz-transition: 0.15s ease-in-out;
+  -ms-transition: 0.15s ease-in-out;
+  -o-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+
+#joke-btn {
+  touch-action: manipulation;
+  -webkit-transform: perspective(500px) rotateX(35deg);
+}
+
+#joke-btn:before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: 1;
+  background: -webkit-linear-gradient(top, #f25d30 0%, #e03b00 100%);
+  background: -o-linear-gradient(top, #f25d30 0%, #e03b00 100%);
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-shadow: inset 0 -2px 5px rgba(255, 255, 255, 0.3);
+}
+
+#joke-btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 1px;
+  height: 15px;
+  width: 173px;
+  background: -webkit-linear-gradient(top, #ba2500 0%, #9b3100 100%);
+  background: -o-linear-gradient(top, #ba2500 0%, #9b3100 100%);
+  border-radius: 0 0 5px 5px;
+  -webkit-transform: perspective(500px) rotateX(-40deg);
+  box-shadow: inset 0 -2px 3px rgba(0, 0, 0, 0.5), 0 3px 2px -1px black;
+  -webkit-transition: 0.15s ease-in-out;
+  -moz-transition: 0.15s ease-in-out;
+  -ms-transition: 0.15s ease-in-out;
+  -o-transition: 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+
+#joke-btn:hover {
+  top: -3px;
+}
+
+#joke-btn:hover:after {
+  height: 18.5px;
+  bottom: -13px;
+}
+
+#joke-btn:active {
+  top: 0px;
+}
+
+#joke-btn:active:after {
+  height: 15px;
+  bottom: -10px;
+}
+
+#joke-btn .text {
+  font-family: var(--font-main);
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.4);
+}
