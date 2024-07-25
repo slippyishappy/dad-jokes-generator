@@ -11,13 +11,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
-app.get('/joke/:theme?', async (req, res) => {
+app.get('/joke', async (req, res) => {
   try {
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
     const timestamp = Date.now();
-    const theme = req.params.theme || 'about anything';
-
-    const prompt = `Write a short, one-sentence funny and understandable dad joke about ${theme}. Make it unique and different from previous jokes. Timestamp: ${timestamp}. Make sure to show only the joke.`;
+    const prompt = `Write a short, one-sentence funny and understandable dad joke. Make it unique and different from previous jokes. Timestamp: ${timestamp}. Make sure to show only the joke.`;
     
     const result = await model.generateContent({
       contents: [{ role: "user", parts: [{ text: prompt }]}],
