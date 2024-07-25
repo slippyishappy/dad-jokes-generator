@@ -1,9 +1,8 @@
-const btn = document.querySelector('#joke-btn');
 const jokeDisplay = document.querySelector('#joke');
 
-btn.addEventListener('click', async () => {
+const generateJoke = async (theme = 'general') => {
   try {
-    const response = await fetch('/joke');
+    const response = await fetch(`/joke/${theme}`);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
@@ -11,5 +10,10 @@ btn.addEventListener('click', async () => {
     jokeDisplay.textContent = data.joke;
   } catch (error) {
     console.error('There was a problem with the fetch operation:', error);
+    jokeDisplay.textContent = 'Failed to fetch joke. Please try again.';
   }
-});
+};
+
+document.querySelector('#general').addEventListener('click', () => generateJoke());
+document.querySelector('#summer').addEventListener('click', () => generateJoke('summer'));
+document.querySelector('#technology').addEventListener('click', () => generateJoke('technology'));
