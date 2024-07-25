@@ -11,7 +11,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const genAI = new GoogleGenerativeAI(process.env.API_KEY);
 
-app.get('/joke:theme?', async (req, res) => {
+app.get('/joke/:theme?', async (req, res) => {
   try {
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
     const timestamp = Date.now();
