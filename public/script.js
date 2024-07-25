@@ -1,6 +1,6 @@
 const jokeDisplay = document.querySelector('#joke');
 
-const generateJoke = async (theme = 'general') => {
+const generateJoke = async (theme = 'about anything') => {
   try {
     const response = await fetch(`/joke/${theme}`);
     if (!response.ok) {
@@ -14,6 +14,6 @@ const generateJoke = async (theme = 'general') => {
   }
 };
 
-document.querySelector('#general').addEventListener('click', () => generateJoke());
+document.querySelector('#about anything').addEventListener('click', () => generateJoke());
 document.querySelector('#summer').addEventListener('click', () => generateJoke('summer'));
 document.querySelector('#technology').addEventListener('click', () => generateJoke('technology'));
