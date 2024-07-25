@@ -12,16 +12,33 @@
 }
 
 body {
+    height: 100vh;
     box-sizing: border-box;
     font-size: var(--main-size);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #03AED2;
+}
+
+.container {
+    width: 60%;
+    padding: 1.5em;
+    background-color: #FEEFAD;
+    color: #74512D;
+    border: 3px dashed #74512D;
+    border-radius: 8px;
 }
 
 h1 {
     font-family: var(--font-second);
     font-weight: var(--semi-bold);
     font-size: 2em;
+    text-align: center;
+}
+
+p {
+    font-size: 0.5em;
+    font-family: var(--font-main);
 }
