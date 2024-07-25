@@ -1,4 +1,4 @@
-const btn = document.querySelector('#joke-btn');
+const btn = document.querySelector('.joke-btn');
 const jokeDisplay = document.querySelector('#joke');
 
 btn.addEventListener('click', async () => {
